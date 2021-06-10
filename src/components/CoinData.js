@@ -16,6 +16,7 @@ const CoinData = () => {
     const filteredCoins = coins.filter(coin => 
         coin.name.toLowerCase().includes(search.toLowerCase())
         )
+    
 
 
     useEffect(() => { 
@@ -38,7 +39,13 @@ const CoinData = () => {
             </div>
             {filteredCoins.map(coin => {
                 return (
-                    <Coin key={coin.id} />
+                    <Coin 
+                    key={coin.id} 
+                    name={coin.name} 
+                    image={coin.image} 
+                    symbol={coin.symbol}
+                    volume={coin.market_cap}
+                    />
                 )
             })}
         </div>
