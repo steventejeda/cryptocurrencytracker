@@ -1,13 +1,11 @@
 import './App.css';
-import Api from "./components/Api"
-import Search from "./components/Search"
+import CoinData from "./components/CoinData"
 
 
 function App() {
   return (
     <div className="App">
-      <Search />
-      <Api />
+      <CoinData />
     </div>
   );
 }
